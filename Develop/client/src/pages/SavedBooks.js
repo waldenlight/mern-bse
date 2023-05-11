@@ -1,4 +1,4 @@
-import React, { useState, useQuery } from 'react';
+import React, { useState } from 'react';
 import {
   Container,
   Card,
@@ -11,7 +11,7 @@ import { getMe, deleteBook } from '../utils/API';
 import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
 import { REMOVE_BOOK } from '../utils/mutations';
-import { useMutation } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
 
 
 const SavedBooks = () => {
