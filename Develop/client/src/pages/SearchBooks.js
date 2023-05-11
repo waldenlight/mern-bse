@@ -37,7 +37,6 @@ const SearchBooks = () => {
     authors: '',
     description: '',
   });
-  const [characterCount, setCharacterCount] = useState(0);
 
   const [saveBook, { error, data }] = useMutation(SAVE_BOOK);
 
@@ -51,6 +50,10 @@ const SearchBooks = () => {
 
     try {
       const response = await searchGoogleBooks(searchInput);
+
+      const { data } = saveBook({
+        variables: { ...formState },
+      });
 
       if (!response.ok) {
         throw new Error('something went wrong!');
@@ -86,14 +89,15 @@ const SearchBooks = () => {
     }
 
     try {
+      const response = await saveBook(bookId, token);
 
       const { data } = saveBook({
         variables: { ...formState },
       });
 
-      // if (!response.ok) {
-      //   throw new Error('something went wrong!');
-      // }
+      if (!response.ok) {
+        throw new Error('something went wrong!');
+      }
 
       // if book successfully saves to user's account, save book id to state
       setSavedBookIds([...savedBookIds, bookToSave.bookId]);
