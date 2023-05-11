@@ -11,10 +11,10 @@ const resolvers = {
     // },
   },
   Mutation: {
-    createBook: async (parent, args) => {
-      const book = await Book.create(args);
-      return book;
-    },
+    // createBook: async (parent, args) => {
+    //   const book = await Book.create(args);
+    //   return book;
+    // },
     // createVote: async (parent, { _id, bookNum }) => {
     //   const book = await Book.findOneAndUpdate(
     //     { _id },
