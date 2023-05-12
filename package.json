@@ -20,6 +20,7 @@
   "dependencies": {
     "@apollo/client": "^3.7.14",
     "apollo": "^2.34.0",
-    "graphql": "^14.7.0"
+    "graphql": "^14.7.0",
+    "node": "^20.1.0"
   }
 }
