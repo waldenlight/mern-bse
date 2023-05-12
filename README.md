@@ -23,7 +23,7 @@ Code refactor for a book search engine, utilizing GraphQL
 ## Installation
 n/a
 ## Usage
-View a the deployed link [here]()
+View a the deployed link [here](https://mern-bse.herokuapp.com/)
 ## Credits
 Source code provided by University of Utah Professional Education Bootcamps
 ## License
